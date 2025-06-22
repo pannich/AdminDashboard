@@ -1,0 +1,13 @@
+id,resident_id,start_at,end_at,summary,recording_url,duration,language
+a394f378-feb7-4164-b73b-3f57cf4ebac1,89f8737f-a157-4f17-b2d5-0f7e89c1f61a,2025-06-20T18:48:17.364649,2025-06-20T19:01:17.364649,Call summary 0,https://example.com/recordings/0.mp3,13,English
+28ee4008-2558-4618-b4e3-6c1da8ba09c4,e8fd2d5d-5768-4cd8-be70-6069439ae19e,2025-06-13T11:48:17.365042,2025-06-13T12:10:17.365042,Call summary 1,https://example.com/recordings/1.mp3,22,Mandarin
+1fc46d02-ff6f-48a3-b43b-1c4aa227baf1,246badb2-6882-43d2-b31e-5ad6483197e5,2025-05-29T10:48:17.365295,2025-05-29T11:30:17.365295,Call summary 2,https://example.com/recordings/2.mp3,42,English
+9fba5e02-a967-443a-a371-1ed59876f49f,246badb2-6882-43d2-b31e-5ad6483197e5,2025-06-02T12:48:17.365919,2025-06-02T13:02:17.365919,Call summary 3,https://example.com/recordings/3.mp3,14,Spanish
+600d42a8-d30d-4728-adb9-7869698b6018,e8fd2d5d-5768-4cd8-be70-6069439ae19e,2025-06-15T10:48:17.366379,2025-06-15T11:30:17.366379,Call summary 4,https://example.com/recordings/4.mp3,42,Mandarin
+361ee996-69d2-42b9-9610-2dac3d039339,89f8737f-a157-4f17-b2d5-0f7e89c1f61a,2025-06-14T19:48:17.366859,2025-06-14T20:08:17.366859,Call summary 5,https://example.com/recordings/5.mp3,20,Mandarin
+5cc495be-4080-4502-a398-e0a657a09d97,246badb2-6882-43d2-b31e-5ad6483197e5,2025-05-31T16:48:17.367121,2025-05-31T16:59:17.367121,Call summary 6,https://example.com/recordings/6.mp3,11,English
+bce3e68b-3ecb-4a0f-a948-8768affa58d3,246badb2-6882-43d2-b31e-5ad6483197e5,2025-05-28T17:48:17.367349,2025-05-28T18:28:17.367349,Call summary 7,https://example.com/recordings/7.mp3,40,Mandarin
+9c072c7d-96fe-4d7e-b4f2-ed8058cb87e3,246badb2-6882-43d2-b31e-5ad6483197e5,2025-06-01T16:48:17.367579,2025-06-01T17:29:17.367579,Call summary 8,https://example.com/recordings/8.mp3,41,Spanish
+60d2bf15-4d8e-41e0-9c02-d5f191d1af47,870c3cad-2df7-46ed-9999-097c76d50b7a,2025-05-28T17:48:17.367799,2025-05-28T18:29:17.367799,Call summary 9,https://example.com/recordings/9.mp3,41,Spanish
+54d8f901-4af2-416c-a308-1532daa69658,e936a960-85a2-4faf-9147-aa92013de84e,2025-06-19T11:48:17.367991,2025-06-19T12:28:17.367991,Call summary 10,https://example.com/recordings/10.mp3,40,English
+ee664d8a-f634-4042-8688-a79707b92cb1,3ba91900-5e2f-42eb-a1b6-c9251b6018e5,2025-06-12T12:48:17.368183,2025-06-12T13:25:17.368183,Call summary 11,https://example.com/recordings/11.mp3,37,Mandarin
