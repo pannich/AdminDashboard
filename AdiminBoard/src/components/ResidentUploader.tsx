@@ -8,7 +8,7 @@
 import { useCallback, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import { residentUploader } from "../api/ResidentUploader";
-import type { Resident, FailedResident } from "../utils/types";
+import type { FailedResident } from "../utils/types";
 
 const baseStyle = {
   flex: 1,
