@@ -17,7 +17,7 @@ type Resident = Entity & {
 
 type Organization = Entity & {
   name: string;
-  residents: Resident[];
+  residents?: Resident[];
 }
 
 type CallHistory = Entity & {
@@ -42,6 +42,8 @@ type QueryModel = {
   sortDirection: 'asc' | 'desc';
 };
 
+type FailedResident = Resident & { failedError: string };
+
 export type {
   Identifier,
   Entity,
@@ -50,4 +52,5 @@ export type {
   CallHistory,
   PageInfo,
   QueryModel,
+  FailedResident,
 }

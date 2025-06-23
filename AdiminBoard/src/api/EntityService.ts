@@ -5,6 +5,7 @@
 
 import type { Entity, Identifier, PageInfo, QueryModel } from "../utils/types";
 import { createClient } from '@supabase/supabase-js';
+import { v4 as uuid } from 'uuid';
 
 // Initialize Supabase client
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
@@ -26,6 +27,7 @@ abstract class EntityService<T extends Entity> {
     return ['=', '>', '<'];
   }
 
+  // Paginated table views
   async find(queryModel: QueryModel, select?: string): Promise<PageInfo<T>> {
     try {
       const fModel = queryModel as any;
@@ -74,6 +76,7 @@ abstract class EntityService<T extends Entity> {
     }
   }
 
+  // Fetching all records without paging
   async getAll(select?: string): Promise<T[]> {
     const { data, error } = await supabaseClient.from(this.tableName).select(select ?? '*');
     if (error) {
@@ -83,6 +86,7 @@ abstract class EntityService<T extends Entity> {
     return data as unknown as T[];
   }
 
+  // Fetching a single record by ID
   async getById(entityId: Identifier, select?: string): Promise<T | null> {
     const { data, error } = await supabaseClient
       .from(this.tableName)
@@ -97,7 +101,12 @@ abstract class EntityService<T extends Entity> {
     return data as unknown as T;
   }
 
+  // Creating, updating, and deleting records
   async insert(entity: T, select?: string): Promise<T> {
+    // Auto-generate UUID if id is not specified
+    if (!entity.id) {
+      entity.id = uuid();
+    }
     const { data, error } = await supabaseClient
       .from(this.tableName)
       .insert([entity])

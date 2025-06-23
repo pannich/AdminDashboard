@@ -48,6 +48,16 @@ VITE_SUPABASE_ANON_KEY=your-anon-key
 Dashboard → SQL Editor (write/create tables)
 supabase`migration new` + `supabase db push`
 
+7. uuid
+```
+npm install uuid
+npm install --save-dev @types/uuid
+```
+
+8. Notifications
+```
+npm install notistack
+```
 
 ======== MOCK DATA
 // Mock data for now

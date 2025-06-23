@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { DataGrid, useGridApiRef } from '@mui/x-data-grid';
 import type { GridColDef, GridSortModel } from '@mui/x-data-grid';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import type { Organization, Resident } from '../utils/types';
 import { organizationService } from '../api/ceOrganizationService';
+import { RefreshContext } from '../contexts/RefreshContext';
+
 import MainCard from './MainCard';
+import UploadSection from './UploadSection';
 
 const getColumns = (): GridColDef[] => [
   { field: 'id', headerName: 'ID', width: 90 },
@@ -38,10 +41,11 @@ export default function OrganizationsTable() {
   });
   const apiRef = useGridApiRef();
   const navigate = useNavigate();
+  const { refresh } = useContext(RefreshContext);
 
   useEffect(() => {
     organizationService.findWithResidents().then(setPageInfo);
-  }, []);
+  }, [refresh]);
 
   // TODO : Handle Row Click
   function handleRowClick(params: any) {
@@ -50,6 +54,7 @@ export default function OrganizationsTable() {
 
   return (
     <MainCard title="Organization">
+      <UploadSection />
       <DataGrid
         apiRef={apiRef}
         rows={pageInfo.rows}
